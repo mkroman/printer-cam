@@ -1,1 +1,0 @@
-cmd='/usr/bin/cmake;-DSDKCONFIG=/home/mk/Projects/ESP32/printer-cam/sdkconfig;-DIDF_PATH=/home/mk/Projects/ESP32/esp-idf;-DSECURE_BOOT_SIGNING_KEY=/home/mk/Projects/ESP32/printer-cam;-DEXTRA_COMPONENT_DIRS=/home/mk/Projects/ESP32/esp-idf/components/bootloader;-GNinja;<SOURCE_DIR><SOURCE_SUBDIR>'
