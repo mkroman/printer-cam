@@ -1,0 +1,31 @@
+
+menu "Printer Camera config"
+  menu "WiFi Credentials"
+
+  config WIFI_SSID
+    string "The WiFi AP to connect to"
+    default testnet
+
+  config WIFI_PASS
+    string "The password to use when connecting to the WiFi AP"
+
+  endmenu
+
+  choice CAMERA_BOARD_SEL
+    prompt "Camera board type"
+    default CAMERA_BOARD_AITHINKER_ESP32_CAM
+    help
+      Different ESP32-based camera boards use various GPIO pins. Select the one you're
+      using.
+
+      If you don't see your board in the list, feel free to add it as a condtitional
+      in `main/include/camera_boards.h` and then add it to this selection menu in the
+      file `main/Kconfig.projbuild`
+
+    config CAMERA_BOARD_AITHINKER_ESP32_CAM
+      bool "Ai-Thinker ESP32-CAM"
+    config CAMERA_BOARD_ESPRESSIF_WROVER_KIT
+      bool "Espressif WROVER-KIT"
+  endchoice
+
+endmenu
